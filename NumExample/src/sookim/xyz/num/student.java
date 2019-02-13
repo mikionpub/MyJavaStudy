@@ -7,11 +7,11 @@ public class student {
 	  
 	  //age
 	public int getage(){
-		return age;
+		return getAge();
 	}
 	
 	public void setage(int age) {
-		this.age = age;
+		this.setAge(age);
 	}
 	
 	// name
@@ -42,16 +42,24 @@ public class student {
 		
 		student std = new student();
 	  		
-	    std.age = 20;
+	    std.setAge(20);
 	    std.name = "sookim";
 	    std.gen = "F";
 	    std.major = "Computer";
 	    
-	    System.out.println("Your age is : " + std.age);
+	    System.out.println("Your age is : " + std.getAge());
 	    System.out.println("Your name is : " + std.name);
 	    System.out.println("Your gender is : " + std.gen);
 	    System.out.println("Your major is : " + std.major);
 	    
 	  }
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
 
 }

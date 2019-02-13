@@ -36,7 +36,7 @@ public static void main(String[] args) {
 		n.sort(x, y);
 		n.avg(x, y);
 		
-		System.out.println("입력 중 가장 큰 숫자는 "+ n.y[n.x-1] +"입니다.");
+		System.out.println("입력 중 가장 큰 숫자는 "+ n.gety[n.getx-1] +"입니다.");
 		System.out.println("입력 중 가장 작은 숫자는 "+ y[0] +"입니다.");
 		System.out.println("입력의 평균 숫자는 "+ n.avg(x, y) +"입니다.");
 		System.out.print("입력하신 숫자의 오름차순 정렬입니다 : ");
