@@ -1,16 +1,28 @@
 package sookim.xyz.num;
 
+import java.util.Scanner;
+
 public class number {
 	
 	private int x;
 	private int[] y;
+	private int temp;
+	private Scanner sc;
 	
-	public int x() {
+	public int getx() {
 		return x;
 	}
 	
 	public int[] gety() {
 		return y;
+	}
+	
+	public int gettemp() {
+		return temp;
+	}
+	
+	public Scanner getsc() {
+		return getSc();
 	}
 	
 	public void setx(int x) {
@@ -20,14 +32,24 @@ public class number {
 	public void sety(int[] y) {
 		this.y = y;
 	}
+	
+	public void settemp(int temp) {
+		this.temp = temp;
+	}
+	
+	public void setsc(Scanner sc) {
+		this.setSc(sc);
+	}
 
-	public int avg(int x, int[] y) {
+	public int avg() {
+		
+		number n = new number();
 		
 		int a;
 		int sum = 0;
 		
-		for(int i=0; i<this.x(); i++) {
-			sum += this.y[i];
+		for(int i=0; i<n.x; i++) {
+			sum += n.y[i];
 			i++;
 		}
 		
@@ -37,24 +59,30 @@ public class number {
 		
 	}
 
-	public int[] sort(int x, int[] y) {
+	public void sort() {
 		
-		int temp;
+		number n = new number();
 		
-		for (int i=0; i<this.x()-1; i++) {
-			if(y[i]>y[i+1]) {
-				temp = this.y[i];
-				this.y[i] = this.y[i+1];
-				this.y[i+1] = temp;
+		for (int i=0; i<n.x; i++) {
+			for(int j=1; j<n.x; j++) {
+				if(i>j) {
+					n.temp = n.y[j];
+					n.y[j] = n.y[i];
+					n.y[i] = n.temp;
+				}
 			}
-		for(int e: y) {
-			System.out.println(e+" ");
-		}
-			
 		}
 		
-		return y;
 		
+		
+	}
+
+	public Scanner getSc() {
+		return sc;
+	}
+
+	public void setSc(Scanner sc) {
+		this.sc = sc;
 	}	
 
 }
